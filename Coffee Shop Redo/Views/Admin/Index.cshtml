@@ -1,0 +1,17 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Admin Product Index:</h1>
+@foreach (Product cur in Model)
+{
+
+    <p>
+        @cur <a href="/Admin/Edit/@cur.id"><input type="button" value="Edit" /></a>
+        <a href="/Admin/Delete/@cur.id"><input type="button" value="Delete" /></a>
+    </p>
+
+}
+<br />
+<a href="/Admin/AddForm/"><input type="button" value="Add Product"/></a>
